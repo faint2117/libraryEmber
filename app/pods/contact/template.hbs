@@ -5,17 +5,17 @@
   <p>Don't miss our launch date, request an invitation now.</p>
   <div class="form-horizontal form-group form-group-lg row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
-      {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+      {{input type="email" value=model.emailAdress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
-      {{textarea class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=message}}
+      {{textarea class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=model.message}}
     </div>
     <div>
-      <button class="btn btn-primary" disabled= {{isDisabled}} {{action 'sendMessage'}}>Request invitation</button>
+      <button class="btn btn-primary" disabled= {{model.isDisabled}} {{action 'sendMessage'}}>Request invitation</button>
     </div>
   </div>
-  {{#if responseMessage}}
-    <div class="alert alert-success">{{responseMessage}}</div>
+  {{#if model.responseMessage}}
+    <div class="alert alert-success">{{model.responseMessage}}</div>
   {{/if}}
   <br/>
   <br/>
