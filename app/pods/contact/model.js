@@ -11,5 +11,7 @@ export default Model.extend({
 
   areValid: Ember.computed.and('emailIsValid', 'messageIsValid'),
 
-  isDisabled: Ember.computed.not('areValid')
+  isDisabled: Ember.computed.not('areValid'),
+
+  responseMessage: ''
 });
