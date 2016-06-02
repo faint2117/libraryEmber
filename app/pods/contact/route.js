@@ -9,7 +9,7 @@ export default Ember.Route.extend({
   actions: {
 
     sendMessage() {
-      this.controller.get('model').save().then((response) => {
+      this.controller.get('model').save().then(() => {
         this.controller.set('model.responseMessage', 'Thank you! We have just send you message');
         this.controller.set('model.emailAdress', '');
         this.controller.set('model.message', '');
