@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('libraries/library-item-form', 'Integration | Component | libraries/library item form', {
+moduleForComponent('library-item', 'Integration | Component | library item', {
   integration: true
 });
 
@@ -9,15 +9,15 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{libraries/library-item-form}}`);
+  this.render(hbs`{{library-item}}`);
 
   assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
   this.render(hbs`
-    {{#libraries/library-item-form}}
+    {{#library-item}}
       template block text
-    {{/libraries/library-item-form}}
+    {{/library-item}}
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');
